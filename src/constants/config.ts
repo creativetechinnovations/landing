@@ -1,6 +1,6 @@
 export const config = {
-  siteName: 'X-Corporation',
-  title: 'X-Corporation',
+  siteName: 'Kreative Intellitech Innovations',
+  title: 'Kreative Intellitech Innovations',
   description: '',
   locale: 'en',
   baseUrl: process.env.baseUrl,

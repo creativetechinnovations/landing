@@ -8,7 +8,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="shortcut icon" href="/assets/images/favicon.ico" />
-          <title>X-Corporation</title>
+          <title>Kreative Intellitech Innovations</title>
         </Head>
         <body>
           <Main />
