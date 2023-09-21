@@ -22,5 +22,6 @@ module.exports = withBundleAnalyzer({
   },
   images: {
     domains: ['placehold.co'],
+    unoptimized: true,
   },
 });
