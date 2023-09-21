@@ -1,13 +1,14 @@
 {
   "name": "KII",
   "version": "1.0.0",
+  "homepage": "https://kreativtechinnovations.com",
   "scripts": {
     "dev": "next --port 3003",
     "build": "next build",
     "start": "next start",
     "deploy": "gh-pages -d dist -t true",
     "build-stats": "ANALYZE=true npm run build",
-    "export": "next build && next export -o dist && touch dist/.nojekyll && echo 'www.kreativtechinnovations.com' > dist/CNAME",
+    "export": "next build && next export -o dist",
     "build-prod": "run-s clean build export",
     "clean": "rimraf .next dist",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
