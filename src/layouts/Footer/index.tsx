@@ -1,68 +1,107 @@
 import Link from 'next/link';
 import React from 'react';
-import { Input, Button } from '@components/Common';
+
+import { FacebookIcon } from '@components/Common/icons';
+import { TwitterIcon } from '@components/Common/icons/Twitter';
+import { GooglePlusIcon } from '@components/Common/icons/GooglePlus';
+import { DribbleIcon } from '@components/Common/icons/Dribble';
 
 export const Footer = () => {
   return (
-    <section className="footer bg-yellow section-container my-0">
-      <div className="mt-32 mb-20">
-        <div className="inline-flex pl-24">
-          <Link href="/" passHref className="text-sm text-primary">
-            <div className="flex">
-              <img className="w-12" src="/assets/icons/logo.svg" alt="WeDu" />
-              <div className="ml-2">
-                <h5 className="text-xl font-bold">WeDu</h5>
-                <span className="whitespace-nowrap">Communicate. Collaborate. Create.</span>
-              </div>
+    <>
+      <section className="footer section-container my-0 bg-black-light">
+        <div className="section-content">
+          <div className="grid grid-cols-1 lg:grid-cols-3 text-gray-100">
+            <div className="py-10 lg:py-20 flex flex-col items-center lg:border-r border-gray-300">
+              <img className="mb-6" src={'/assets/images/logo.png'} alt="X-Corporation" />
+              <p className="max-w-68 text-center text-sm leading-6">
+                Continually matrix cross functional opportunities whereas ethical information.
+                Compellingly streamline enabled human capital before resource-leveling internal or
+                "organic".
+              </p>
             </div>
-          </Link>
-        </div>
-        <div className="section-content mt-10">
-          <div className="flex justify-between gap-x-10">
-            <div>
-              <h4 className="text-2xl font-semibold mb-10">Contact</h4>
-              <div className="flex gap-x-10">
-                <div className="flex flex-col gap-y-10">
-                  <p>500 Terry Francine Street<br/> San Francisco, CA 94158</p>
-                  <p>General Inquiries:<br/>123-456-7890</p>
-                </div>
-                <div className="flex flex-col gap-y-10">
-                  <p>Sales:<br/>info@mysite.com</p>
-                  <p>Customer Care:<br/>info@mysite.com</p>
-                </div>
-              </div>
+            <div className="py-10 lg:py-20 flex flex-col items-center lg:border-r border-gray-300">
+              <h4 className="text-white text-lg mb-4">We work for your profit</h4>
+              <p className="max-w-68 text-center text-sm leading-6">
+                Distinctively expedite viral materials rather than out-of-the-box solutions.
+                Credibly empower revolutionary ROI rather than unique products. Collaboratively
+                maximize principle-centered ideas before highly efficient data. Phosfluorescently.
+              </p>
             </div>
-            <div>
-              <h4 className="text-2xl font-semibold mb-10">Quick Links</h4>
-              <div className="flex flex-col gap-y-6">
-                <a className="underline">Terms & Conditions</a>
-                <a className="underline">Privacy Policy</a>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-2xl font-semibold mb-10">Follow</h4>
-              <div className="flex flex-col gap-y-6">
-                <p>Sign up to get the latest news on our product.</p>
-                <div>
-                  <p>Email *</p>
-                  <div className="flex mt-2">
-                    <Input className="rounded-r-none border-r-0"/>
-                    <Button className="rounded-l-none px-6">Subscribe</Button>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <div className="flex flex-col justify-end gap-y-6">
-                <a className="text-xl font-semibold">Linkedin</a>
-                <a className="text-xl font-semibold">YouTube</a>
-                <a className="text-xl font-semibold">Facebook</a>
-              </div>
+            <div className="py-10 lg:py-20 flex flex-col items-center">
+              <h4 className="text-white text-lg mb-4">Contact Us Today</h4>
+              <p className="max-w-62 text-center text-sm leading-6">
+                Call Us +6282216866725 <br /> Send an Email on{' '}
+                <a className="text-blue-100" href="#">
+                  contact@kreativetechinnovations.com
+                </a>
+                <br />
+                Jalan Akipadma 001/006, Babakan, Babakan Ciparay, Kota Bandung, Indonesia
+              </p>
+              {/* <div className="flex gap-3 mt-10">
+                <a
+                  className="w-10 h-10 flex items-center justify-center transition-all duration-300 rounded-full bg-gray-400 text-gray-600 hover:bg-blue-100 hover:text-white"
+                  href="#"
+                >
+                  <FacebookIcon />
+                </a>
+                <a
+                  className="w-10 h-10 flex items-center justify-center transition-all duration-300 rounded-full bg-gray-400 text-gray-600 hover:bg-blue-100 hover:text-white"
+                  href="#"
+                >
+                  <TwitterIcon />
+                </a>
+                <a
+                  className="w-10 h-10 flex items-center justify-center transition-all duration-300 rounded-full bg-gray-400 text-gray-600 hover:bg-blue-100 hover:text-white"
+                  href="#"
+                >
+                  <GooglePlusIcon />
+                </a>
+                <a
+                  className="w-10 h-10 flex items-center justify-center transition-all duration-300 rounded-full bg-gray-400 text-gray-600 hover:bg-blue-100 hover:text-white"
+                  href="#"
+                >
+                  <DribbleIcon />
+                </a>
+              </div> */}
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section className="section-container bg-black-dark">
+        <div className="section-content w-full flex flex-wrap justify-between text-gray-600 py-5">
+          <p className="font-[600] text-sm">
+            COPYRIGHT © 2020 |{' '}
+            <a href="#" className="text-blue-100">
+              KREATIVE INTELLITECH INNOVATIONS
+            </a>{' '}
+            {/* DESIGNED AND DEVELOPED BY:{' '}
+            <a className="text-blue-100" href="#">
+              UICOOKIES.COM
+            </a> */}
+          </p>
+          <div className="flex gap-5">
+            <Link href="/" className="text-[14px] text-white">
+              Home
+            </Link>
+            <Link href="/about" className="text-[14px]">
+              About
+            </Link>
+            <Link href="/services" className="text-[14px]">
+              Services
+            </Link>
+            {/* <a href="/" className="text-[14px]">
+              Portfolio
+            </a>
+            <a href="/" className="text-[14px]">
+              Blog
+            </a> */}
+            <Link href="/contact" className="text-[14px]">
+              Contact
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };

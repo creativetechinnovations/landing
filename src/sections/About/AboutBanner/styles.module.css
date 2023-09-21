@@ -1,0 +1,18 @@
+.aboutUsBanner {
+    background: url('/assets/images/img-page-title.jpg') no-repeat bottom;
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    padding: 15% 0 5%;
+    position: relative;
+}
+
+.aboutUsBanner::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.7);
+}

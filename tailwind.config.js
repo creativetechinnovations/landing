@@ -1,5 +1,12 @@
 const tailwindColors = require('tailwindcss/colors');
 
+const sizes = {};
+
+for (let i = 0; i < 500; i++) {
+  sizes[i] = `${i / 4}rem`;
+  sizes[`${i}.5`] = `${(i + 0.5) / 4}rem`;
+}
+
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,jsx,ts,tsx}', './styles/**/*.scss'],
   theme: {
@@ -15,6 +22,13 @@ module.exports = {
       xl: '1200px',
     },
     extend: {
+      spacing: sizes,
+      minHeight: sizes,
+      minWidth: sizes,
+      maxHeight: sizes,
+      maxWidth: sizes,
+      borderRadius: sizes,
+      fontSize: sizes,
       colors: {
         primary: {
           DEFAULT: '#000000',
@@ -42,14 +56,28 @@ module.exports = {
           ...tailwindColors.green,
         },
         gray: {
-          DEFAULT: '#f6f5f5',
-          dark: '#b3b3b3',
-          light: '#f2f2f2',
           ...tailwindColors.gray,
+          DEFAULT: '#f6f5f5',
+          dark: '#333333',
+          light: '#f9f9f9',
+          50: '#f1f1f1',
+          100: '#969595',
+          200: '#dadada',
+          300: '#3a3a3a',
+          400: '#4a4a4a',
+          600: '#6b6b6b',
+        },
+        blue: {
+          ...tailwindColors.blue,
+          light: '#4d7ecc',
+          50: '#9dd1f6',
+          100: '#31aae2',
+          200: '#2281ad',
         },
         black: {
           DEFAULT: '#000000',
-          dark: '#393939',
+          dark: '#2d2d2d',
+          light: '#313131',
         },
       },
       fontFamily: {

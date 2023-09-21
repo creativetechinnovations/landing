@@ -45,7 +45,7 @@ export const Button: FC<IButtonProps> = ({
     switch (color) {
       case 'primary':
         if (variant === 'standard') {
-          classes.push('bg-primary text-white border-black hover:text-black hover:bg-yellow');
+          classes.push('bg-blue-100 text-white hover:bg-blue-200');
         } else {
           classes.push('text-primary border-primary hover:bg-primary hover:text-white');
         }
@@ -95,8 +95,8 @@ export const Button: FC<IButtonProps> = ({
   const button = (
     <button
       className={classnames(
-        'h-[40px] min-w-[52px]',
-        'inline-flex items-center justify-center rounded border px-3 font-semibold',
+        'h-10 min-w-[52px]',
+        'inline-flex items-center justify-center border px-7.5 text-3.5 rounded-0 uppercase',
         'outline-none transition-all duration-300',
         rounded && '!rounded-full',
         buttonTheme,

@@ -1,11 +1,12 @@
-import React, { MouseEventHandler, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import classnames from 'classnames';
 
 import { CloseIcon, MenuIcon } from '@components/Common/icons';
-import { Button, Drawer } from '@components/Common';
+import { Drawer } from '@components/Common';
 
 import styles from './styles.module.css';
+import useScroll from '@hooks/useScroll';
 
 const menuList = [
   {
@@ -13,26 +14,24 @@ const menuList = [
     label: 'Home',
   },
   {
-    link: '/product',
-    label: 'Product',
+    link: '/about',
+    label: 'About',
   },
   {
-    link: '/pricing-plans',
-    label: 'Pricing Plans',
+    link: '/services',
+    label: 'Services',
   },
   {
     link: '/contact',
     label: 'Contact',
-  },
-  {
-    link: '/login',
-    label: 'Login',
   },
 ];
 
 export const Header = () => {
   const [showLinkDrawer, setShowLinkDrawer] = useState(false);
 
+  const scroll = useScroll();
+  console.log(scroll);
   const handleClick = () => {
     setShowLinkDrawer((prevState) => !prevState);
   };
@@ -42,42 +41,39 @@ export const Header = () => {
   return (
     <header
       className={classnames(
-        'w-full py-8',
-        'transition-all duration-500',
-        styles.siteHeader
+        'fixed top-0 w-full py-7',
+        'transition-all duration-500 z-[1030]',
+        styles.siteHeader,
+        scroll > 100 && 'bg-gray-dark !py-4'
       )}
     >
-      <div className="h-full flex items-center w-full justify-between">
-        <div className="z-20 inline-flex justify-center items-center ml-6 md:ml-12 py-2 px-3 bg-white">
-          <Link href="/" passHref className="text-sm text-primary uppercase">
-            <div className="flex">
-              <img className="w-12" src="/assets/icons/logo.svg" alt="KII" />
-              <div className="ml-2">
-                <h5 className="text-xl font-bold">WeDu</h5>
-                <span className="whitespace-nowrap">Communicate. Collaborate. Create.</span>
-              </div>
-            </div>
+      <div className="section-content h-full flex items-center w-full justify-between">
+        <div className="z-20 inline-flex justify-center items-center">
+          <Link href="/" passHref className="text-sm text-primary uppercase h-10 w-50">
+            <img
+              className="kii-logo"
+              src="/assets/images/logo.png"
+              alt="Kreative Intellitech Innovations"
+            />
           </Link>
         </div>
-        <div className="hidden w-full md:flex justify-end items-center h-16 pr-10">
+        <div className="hidden w-full md:flex justify-end items-center space-x-5">
           {menuList.map((menu) => (
             <a
               key={menu.label}
               href={menu.link}
-              className="text-black transition-all flex items-center md:ml-5 lg:ml-10"
+              className="text-white text-sm transition-all flex items-center px-4 py-2 border-2 border-transparent font-semibold hover:border-white uppercase"
             >
-              { menu.label === 'Login' && <img className="w-8 mr-4" src="/assets/icons/user_avatar.svg" alt="Login" />}
               {menu.label}
             </a>
           ))}
-          <Button color="secondary" className="ml-10">Get Started</Button>
         </div>
-        <div className="flex md:hidden justify-end items-center h-16 pr-10">
+        <div className="flex md:hidden justify-end items-center h-16">
           <i
-            className={classnames('cursor-pointer hover:text-primary z-[60] header-link')}
+            className={classnames('cursor-pointer hover:text-white z-[60] header-link')}
             onClick={handleClick}
           >
-            {showLinkDrawer ? <CloseIcon size={30} /> : <MenuIcon size={30} />}
+            {showLinkDrawer ? <CloseIcon size={30} /> : <MenuIcon size={30} color="white" />}
           </i>
         </div>
         <Drawer open={showLinkDrawer} isFullWidth handleClose={handleClose} hideCloseButton={true}>

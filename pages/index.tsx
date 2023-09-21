@@ -3,16 +3,14 @@ import { animated, useSpring, useSpringRef, useTransition } from '@react-spring/
 
 import { FullLayout, Meta } from '@layouts';
 
+import { HomeBanner } from '@sections';
 import {
-  BlogSection,
-  GetStartedSection,
-  HomeSection,
-  IntroduceSection,
-  PricingSection,
-  TrustedSection,
+  ClientsSection,
+  CustomerSection,
+  OurCapabilitiesSection,
+  OurTeamSection,
   WhatWeOfferSection,
-} from '@sections';
-import { Button } from '@components/Common';
+} from '@sections/Home';
 
 const Index = () => {
   const [index] = useState(0);
@@ -32,13 +30,12 @@ const Index = () => {
     <FullLayout meta={<Meta />}>
       <div className="w-full">
         <div className="main-home-section pb-0">
-          <HomeSection />
-          <IntroduceSection />
+          <HomeBanner />
           <WhatWeOfferSection />
-          <TrustedSection />
-          <BlogSection />
-          <PricingSection />
-          <GetStartedSection />
+          <OurCapabilitiesSection />
+          <OurTeamSection />
+          <CustomerSection />
+          {/* <ClientsSection /> */}
         </div>
       </div>
     </FullLayout>

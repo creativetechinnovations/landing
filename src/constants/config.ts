@@ -1,6 +1,6 @@
 export const config = {
-  siteName: 'KII',
-  title: 'KII',
+  siteName: 'X-Corporation',
+  title: 'X-Corporation',
   description: '',
   locale: 'en',
   baseUrl: process.env.baseUrl,

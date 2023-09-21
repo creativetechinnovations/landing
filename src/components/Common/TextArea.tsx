@@ -1,9 +1,10 @@
-import React, { ComponentProps, FC } from 'react';
+import React, { ComponentProps, FC, ReactNode } from 'react';
 import classnames from 'classnames';
 
 type TextAreaProps = {
   label?: string;
-  className?;
+  className?: string;
+  icon?: ReactNode;
 } & ComponentProps<'textarea'>;
 
 export const TextArea: FC<TextAreaProps> = ({
@@ -12,11 +13,12 @@ export const TextArea: FC<TextAreaProps> = ({
   name,
   label,
   placeholder,
+  icon,
   required = false,
   ...restProps
 }) => {
   return (
-    <div className="flex flex-col w-full box-content">
+    <div className="relative flex flex-col w-full box-content">
       {label && (
         <span className="text-white text-md mb-2">
           {label} {required ? '*' : ''}
@@ -24,7 +26,7 @@ export const TextArea: FC<TextAreaProps> = ({
       )}
       <textarea
         className={classnames(
-          'h-20 px-4 w-full text-white placeholder-white transition-all duration-75 bg-transparent border-b border-white hover:border-b-[3px]',
+          'min-h-49 pt-3.5 pb-1.5 pr-5 pl-7.5 text-3.5 w-full text-gray-100 placeholder-gray-100 transition-all duration-75 bg-transparent border-2 border-gray-50 focus:border-blue-50',
           className
         )}
         name={name}
@@ -32,6 +34,7 @@ export const TextArea: FC<TextAreaProps> = ({
         rows={3}
         {...restProps}
       />
+      {icon && <div className="absolute left-3.5 top-3.5 text-gray-100">{icon}</div>}
     </div>
   );
 };

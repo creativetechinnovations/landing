@@ -6,6 +6,11 @@
   animation: fadeOut 1s;
 }
 
+.kii-logo {
+  height: 40px;
+  max-width: initial;
+}
+
 .translateIn {
   animation: translateIn .5s;
 }

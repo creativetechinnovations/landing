@@ -20,4 +20,7 @@ module.exports = withBundleAnalyzer({
   future: {
     webpack5: true,
   },
+  images: {
+    domains: ['placehold.co'],
+  },
 });
