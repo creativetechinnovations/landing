@@ -6,25 +6,27 @@ import { EyeIcon, ShoppingCartIcon, StarIcon, ThumbsUpIcon } from '@components/C
 const solutionItems = [
   {
     icon: <EyeIcon size={30} />,
-    title: 'Management Consulting',
+    title: 'Custom Software Development',
     description:
-      'Empower your business with expert guidance for strategic growth and operational excellence.',
+      'Experience tailored excellence with our Custom Software Development solutions, meticulously crafted to meet your unique business needs and drive your business success.',
   },
   {
     icon: <ThumbsUpIcon size={30} />,
-    title: 'Finance & Grants  ',
-    description: "Unlock financial opportunities and grants to fuel your business's success.",
+    title: 'Cybersecurity Services',
+    description:
+      "Elevate your digital defenses with our comprehensive Cybersecurity Services, safeguarding your business against evolving threats in today's interconnected world.",
   },
   {
     icon: <StarIcon size={30} />,
-    title: 'Scientific & Risk Assessment',
-    description: 'Mitigate risks and enhance decision-making with our scientific assessments.',
+    title: 'Data Backup and Recovery',
+    description:
+      'Protect your critical data and ensure business continuity with our Data Backup and Recovery solutions, designed to keep your information safe and accessible at all times.',
   },
   {
     icon: <ShoppingCartIcon size={30} />,
-    title: 'Corporate Finance',
+    title: 'IT Infrastructure Consulting',
     description:
-      'Optimize your corporate finance strategy for sustainable growth and profitability.',
+      'Empower your business with our IT Infrastructure Consulting services, optimizing your technology backbone to enhance efficiency, scalability, and overall performance.',
   },
 ];
 

@@ -102,3 +102,35 @@
     transform: translateX(-100%);
   }
 }
+
+.quote-text {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+}
+
+.quote-text:before {
+  content: "";
+  background-image: url(/assets/icons/quote_1.svg);
+  width: 24px;
+  position: absolute;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: -30px;
+  top: -8px;
+}
+
+.quote-text:after {
+  content: "";
+  background-image: url(/assets/icons/quote_2.svg);
+  width: 24px;
+  display: inline-block;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-size: cover;
+  top: 8px;
+}

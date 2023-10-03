@@ -5,32 +5,32 @@ const data = [
   {
     image: '/assets/images/Team_Indra_Wijaya.png',
     name: 'Indra Wijaya',
-    job: 'COO',
+    job: 'Advisor',
   },
   {
     image: '/assets/images/Team_Vincentius_Dwi_Prasetyo.png',
     name: 'Vincentius Dwi Prasetyo',
-    job: 'CEO',
+    job: 'Founder',
   },
   {
     image: '/assets/images/Team_Kevin_Martin.png',
     name: 'Kevin Martin',
-    job: 'CFO',
+    job: 'Tech Manager',
   },
   {
     image: '/assets/images/Team_Harry_Senjaya.png',
     name: 'Harry Senjaya',
-    job: 'Director',
+    job: 'Software Developer',
   },
   {
     image: '/assets/images/Team_Jan_Alexander.png',
     name: 'Jan Alexander',
-    job: 'CTO',
+    job: 'Software Developer',
   },
   {
     image: '/assets/images/Team_Muhammad_Rizky_Alwan.png',
     name: 'Nuhammad Rizky Alwan',
-    job: 'Marketing',
+    job: 'Software Developer',
   },
 ];
 

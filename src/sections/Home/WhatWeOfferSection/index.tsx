@@ -4,27 +4,27 @@ import { SectionTitle } from '@components/Common';
 const data = [
   {
     image: '/assets/images/img-offer-1.jpg',
-    title: 'Investment',
+    title: 'Web Development',
     description:
-      'Our investment solutions are designed to help you achieve your financial goals with a diverse range of opportunities and expert guidance.',
+      'Our expert team specializes in creating stunning, user-friendly websites that not only captivate your audience but also drive results, making your online presence a true success.',
   },
   {
     image: '/assets/images/img-offer-2.jpg',
-    title: 'Planning',
+    title: 'Mobile Development',
     description:
-      'Discover our comprehensive planning services tailored to your unique financial needs, ensuring a secure and prosperous future for you and your family.',
+      "Our Mobile Development services harness the latest technology trends to craft cutting-edge mobile applications that elevate your brand's reach and engagement on smartphones and tablets.",
   },
   {
     image: '/assets/images/img-offer-3.jpg',
-    title: 'Analysis',
+    title: 'AI Development',
     description:
-      "Our in-depth analysis tools and expertise empower you to make informed decisions, turning data into actionable insights for your business's success.",
+      'Our AI Development services leverage the power of artificial intelligence to create intelligent solutions, enhance decision-making, and revolutionize your business operations.',
   },
   {
     image: '/assets/images/img-offer-4.jpg',
-    title: 'Banking',
+    title: 'VR/AR Development',
     description:
-      'We provide modern banking solutions, ensuring seamless transactions, robust security, and unparalleled customer support for all your financial needs.',
+      'Our VR/AR Development expertise transforms your concepts into immersive experiences, pushing the boundaries of reality to engage and amaze your audience like never before.',
   },
 ];
 

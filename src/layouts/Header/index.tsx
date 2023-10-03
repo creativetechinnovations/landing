@@ -18,6 +18,10 @@ const menuList = [
     label: 'About',
   },
   {
+    link: '/portfolio',
+    label: 'Portfolio',
+  },
+  {
     link: '/services',
     label: 'Services',
   },

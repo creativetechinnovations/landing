@@ -12,7 +12,7 @@ const About = () => {
           <AboutUsBanner />
           <WordsAboutUsSection />
           <ProfessionalSkillsSection />
-          <CustomerSection />
+          {/*<CustomerSection />*/}
           {/* <ClientsSection /> */}
         </div>
       </div>

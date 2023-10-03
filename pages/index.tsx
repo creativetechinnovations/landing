@@ -9,6 +9,7 @@ import {
   CustomerSection,
   OurCapabilitiesSection,
   OurTeamSection,
+  PortfolioSection,
   WhatWeOfferSection,
 } from '@sections/Home';
 
@@ -34,7 +35,8 @@ const Index = () => {
           <WhatWeOfferSection />
           <OurCapabilitiesSection />
           <OurTeamSection />
-          <CustomerSection />
+          <PortfolioSection />
+          {/*<CustomerSection />*/}
           {/* <ClientsSection /> */}
         </div>
       </div>
