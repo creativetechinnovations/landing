@@ -35,7 +35,7 @@ const PortfolioDetail = () => {
               <div className="flex flex-col lg:flex-row gap-20 mt-10">
                 <div className="flex flex-col gap-4">
                   <h2 className="text-6 font-bold">{portfolio?.heading}</h2>
-                  {(portfolio.description || []).map((sentence, index) => (
+                  {(portfolio?.description || []).map((sentence, index) => (
                     <p key={index}>{sentence}</p>
                   ))}
                   {/* <div className="px-10 py-5">
@@ -62,20 +62,20 @@ const PortfolioDetail = () => {
                   <div className="flex flex-col gap-4 mt-6">
                     <div>
                       <p className="uppercase text-3 text-gray-100">Category</p>
-                      <p>{portfolio.category}</p>
+                      <p>{portfolio?.category}</p>
                     </div>
                     <div>
                       <p className="uppercase text-3 text-gray-100">Client</p>
-                      <p>{portfolio.client}</p>
+                      <p>{portfolio?.client}</p>
                     </div>
                     <div>
                       <p className="uppercase text-3 text-gray-100">Project Date</p>
-                      <p>{portfolio.date}</p>
+                      <p>{portfolio?.date}</p>
                     </div>
                     <div>
                       <p className="uppercase text-3 text-gray-100">Project Url</p>
-                      <a href={portfolio.url} className="text-blue-100" target="_blank">
-                        {portfolio.url}
+                      <a href={portfolio?.url} className="text-blue-100" target="_blank">
+                        {portfolio?.url}
                       </a>
                     </div>
                     {/* <Button className="rounded-full">Visit Website</Button> */}
