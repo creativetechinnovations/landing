@@ -71,7 +71,7 @@ export const Footer = () => {
       <section className="section-container bg-black-dark">
         <div className="section-content w-full flex flex-wrap justify-between text-gray-600 py-5">
           <p className="font-[600] text-sm">
-            COPYRIGHT © 2020 |{' '}
+            COPYRIGHT © 2023 |{' '}
             <a href="#" className="text-blue-100">
               KREATIVE INTELLITECH INNOVATIONS
             </a>{' '}
